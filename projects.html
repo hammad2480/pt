@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS\styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/ed4eb87834.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Freehand&family=Fuzzy+Bubbles:wght@400;700&family=Montserrat:wght@300;900&family=Nunito+Sans&family=Prompt&family=Ubuntu&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar  navbar-dark navbar-expand-lg ">
+       <a class="navbar-brand " href="index.html" style="font-family:Fuzzy Bubbles ; font-weight: 700;" ><i class="fa-solid fa-house"></i></a>
+       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+       <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+       <ul class="navbar-nav ms-auto ">
+        <li class="nav-item">
+            <a class="nav-link" href="Resume\Hammad's Resume.pdf">Resume</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="">Projects</a>
+        </li>
+        <li class="nav-item">
+            <div class="dropdown">
+                <a class="nav-link dropdown-toggle" href="" data-bs-toggle="dropdown" aria-expanded="false">Contact</a>
+                <ul class="dropdown-menu bounceIn">
+                  <li><a class="dropdown-item" href="mailto:hammadkhalid2480@gmail.com"><i class="fa-regular fa-envelope"></i> Mail</a></li>
+                  <li><a class="dropdown-item" href="https://linkedin.com/in/hk227"><i class="fa-brands fa-linkedin"></i> Linkedin</a></li>
+                </ul>
+              </div> 
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="skills.html">Skills</a>
+        </li>
+
+       </ul>
+    </div>
+
+    </nav>
+    <section class="fadeInUp proj">
+    <div id="carouselExampleControls" class="carousel slide"  data-bs-interval="3500" >
+        <div class="carousel-inner">
+          <div class=" carousel-item active">
+            <h1 class="projectheading">Remote Temperature monitoring and control</h1>
+            
+            <img class="IOT" src="Images\RTM.jpg" alt="">
+            <a href="https://github.com/hammad2480/Remote-temperature-monitoring.git"><button class=" A btn btn-success"> Code</button></a>
+            <h3 class=" c overview">Overview</h3>
+            <p class="p2">The project was aimed to monitor and control temperature and humidity remotely from anywhere which was accomplished by MQTT and MQTT over web sockets protocols to communicate with HiveMQ cloud. </p>
+            <h3 class="overview">Working</h3>
+            
+            <p class="p2" >(1) The temperature and humidity readings read by ESP8266 were sent to the ThingSpeak cloud and also to the MQTT broker HiveMQ via publish method. </p>
+            <p class="p2" style="margin-top: 25px;">(2) The second ESP8266 which was the subscriber of the published topic recieves the message and displays it on 128 x 64 OLED module interfaced through I2C protocol. </p>
+            <p class="p2" style="margin-top: 25px;">(3) The responsive webpage made by front end technologies (HTML, CSS, BootStrap and javaScript DOM) was used to recieve the data from ThingSpeak and display the live data on widgets.</p>
+            <p class="p2" style="margin-top: 25px;">(4) Moreover the webpage was also connected to the HiveMQ to serve as MQTT javaScript web client via MQTT over websockets to turn the fan on or off.</p>
+          </div>
+          <div class=" carousel-item ">
+          <h1 class="projectheading">IOT Based Irrigation System</h1>
+          <img class="IOT IOT2" src="Images\Screenshot 2023-09-13 131515.png" alt="">
+          <h3 class="overview">Overview</h3>
+          <p class="p2">The project was aimed to be implemented on large scale to automate the farming techniques and reduce the water loss and labour cost.</p>
+          <h3 class="overview">Working</h3>
+          
+          <p class="p2" >(1)  ESP8266 operating in access point mode was used as a main micro controller. </p>
+          <p class="p2" style="margin-top: 25px;">(2) Four D1 mini each connected to the soil moisture sensor was operated in station mode to wirelessly send data to main ESP8266. </p>
+          <p class="p2" style="margin-top: 25px;">(3) DHT11 was used for monitoring temperature and humidity. The data of the sensors was stored on ThingSpeak cloud and also displayed on the self designed
+            web page hosted on ESP8266 using SPIFFS.</p>
+          <p class="p2" style="margin-top: 25px;">(4) Solenoid valves connected with four channel relay were used to only water the area where needed.</p>
+        </div>
+        <div class=" carousel-item ">
+          <h1 class="projectheading">WiFi Controlled RC robot with obstacle avoidance</h1>
+          <img class="IOT IOT1" src="Images\12.jpg" alt="">
+          <a href="https://github.com/hammad2480/Wifi-Robot.git"><button class=" A btn btn-success"> Code</button></a>
+          <h3 class="overview">Overview</h3>
+          <p class="p2">The project was aimed to learn new concepts like creating ESP8266 Asynchronus webserver and using ESP8266 SPIFFS.</p>
+          <h3 class="overview">Working</h3>
+          
+          <p class="p2" >(1)  ESP8266 operating in station mode acting as Asynchronus web server was used as micro controller. </p>
+          <p class="p2" style="margin-top: 25px;">(2) The robot was Controlled by webpage hosted locally on ESP8266 via SPIFFS. </p>
+          <p class="p2" style="margin-top: 25px;">(3) Ultra sonic sensor was used to avoid any kind of obstacles and choose the best path available.  .</p>
+          <p class="p2" style="margin-top: 25px;">(4) L293D IC was used to control two DC motors.</p>
+        </div>
+          
+          
+          
+          
+          
+          <div class="carousel-item">
+            <h1 class="projectheading">2D-CNC Machine</h1>
+            <img class=" IOT IOT2" src="Images\jyp.jpg" alt="">
+            <p class="p1">This was my junior year project. Our 2D plotter was capable of drawing computer processed binary images on a page. Arduino (UNO) microcontroller was used to control movements of the stepper motors along X-axis and Y-axis. Solenoid coil was used to control moment of our plotting pen on Z-axis. It basically works with two stepper motors and a solenoid, wherein the robot plots the input given from the computer on the paper. The Arduino microcontroller was used to control the movements of stepper motors. Solenoid was used for raising the pen up and down vertically. Due to cost limitations, we couldn’t use position sensor in our plotter, hence we had to use physical switches.</p>
+          </div>
+          <div class="carousel-item">
+            <h1 class="projectheading">Digital Clock</h1>
+            <img style="border-radius: 10%;" class="IOT IOT2" src="Images\123.png" alt="">
+            <p class="p1">This was a digital logic design project that was comprised of total of six counters. Two for each hours, minutes and seconds.
+              For each minutes and seconds two counters were used. One counts from 0-9 and other from 0-5 in order to make 59 minutes or 59 seconds. Each counter gets reset after reaching desired number. For hours section one couner counts from 0-1 while other was a 0-9 counter and the combination of two was responsible for 12 hour format. Alarm was also implemented in the clock. Overall the project was very budget freindly and used components like seven segment displays, 555 timer IC, 7493 counter IC, logic gates IC's, bread boards and a 5V power supply.</p>
+          </div>
+          <div class="carousel-item">
+            <h1 class="projectheading">Temperature monitoring door system</h1>
+            <img class="IOT IOT2" src="Images\TMD.jpg" alt="">
+            <p class="p1">This project used temprature sensors, two mini servo motors, Arduino, 16x2 LCD display and bread board as the main components.
+              The project purose was to monitor the temprature of individual and compare the temprature with the threshold temprature that is set within microcontroller. The servo motors opens or closes the door based on the individual temprature.</p>
+          </div>
+          <div class="carousel-item">
+            <h1 class="projectheading">Frequency detector using MATLAB</h1>
+            <img class="IOT IOT2" src="Images\screenshot.jpg" alt="">
+            <p class="p1">This was one of my favirote project using MATLAB. The project uses the recorded audio signal and if the frequency of the signal is higher than the specified frequency range then it reveals a person gender as female and male if the frequency is in the range.</p>
+          </div>
+          <div class="carousel-item">
+            <h1 class="projectheading">MOSFET constant current source</h1>
+            <img class="IOT IOT2" src="Images\lmn.png" alt="">
+            <p class="p1">The purpose of this project was to achieve constant current source using 2N7000 MOSFET's by studying and chracterizing IV chracteristics of MOSFET, operation of current mirrors, Basic and Wilson current mirrors.</p>
+          </div>
+        
+          <div class="carousel-item">
+            <h1 class="projectheading">Patch antenna designing using COMSOL</h1>
+            <img class="IOT IOT2" src="Images\009.jpg" alt="">
+            <p class="p1">The performance and advantages of microstrip patch antennas such as low 
+              weight, low profile, and low cost made them the perfect choice for 
+              communication systems engineers. They have the capability to integrate with 
+              microwave circuits and therefore they are very well suited for applications such 
+              as cell devices, WLAN applications, navigation systems and many others 
+              In this project; a compact rectangular patch antenna was designed using COMSOL software that is used for 
+              GPS devices at 1.57542 GHz, and for a satellite TV signal at 11.843 GHz and 
+              11.919 GHz.</p>
+          </div>
+      
+          
+          
+        </div>
+        <button class="mybtn carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="mybtn carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+    </body>
+    </html>
